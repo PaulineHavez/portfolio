@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const technicalSkills = [
@@ -37,6 +37,23 @@ const humanSkills = [
 
 function NavBar() {
   const [competencesOpen, setCompetencesOpen] = useState(false);
+  const competencesRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    if (!competencesOpen) return;
+
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        competencesRef.current &&
+        !competencesRef.current.contains(event.target as Node)
+      ) {
+        setCompetencesOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [competencesOpen]);
 
   return (
     <nav className="bg-#fffdf5; sticky w-full z-20 top-0 inset-s-0 border-default">
@@ -100,7 +117,7 @@ function NavBar() {
                 </a>
               </li>
             </NavLink>
-            <li className="relative">
+            <li className="relative" ref={competencesRef}>
               <button
                 id="dropdownCompetencesButton"
                 type="button"
@@ -131,7 +148,7 @@ function NavBar() {
               </button>
               <div
                 id="dropdownCompetences"
-                className={`${competencesOpen ? "" : "hidden"} absolute z-10 mt-2 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72`}
+                className={`${competencesOpen ? "" : "hidden"} absolute z-10 mt-2 bg-[#FFFDF5] border border-mist-50 rounded-3xl shadow-lg w-72`}
               >
                 <div
                   className="p-2 text-sm text-body font-medium"
