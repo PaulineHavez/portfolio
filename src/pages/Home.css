@@ -1,0 +1,156 @@
+
+.bureau-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.scene {
+  display: flex;
+  align-items: flex-end;   
+  justify-content: center;
+  gap: 48px;
+  padding: 56px 16px 0;
+  flex-wrap: wrap;
+}
+
+.sol {
+  height: 14px;
+  background: #C99B6B;
+  border-radius: 7px;
+  width: min(800px, 92vw);
+  margin: 0 auto;
+}
+
+.laptop { position: relative; width: 260px; }
+
+.ecran {
+  width: 230px;
+  height: 150px;
+  margin: 0 auto;
+  background: #243447;
+  border: 8px solid #37475C;
+  border-bottom-width: 10px;
+  border-radius: 10px 10px 0 0;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+.ligne {
+  height: 8px;
+  border-radius: 4px;
+  margin-bottom: 9px;
+}
+
+.socle {
+  width: 260px;
+  height: 12px;
+  background: #4A5D75;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+}
+
+.socle::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 0;
+  transform: translateX(-50%);
+  width: 56px; height: 5px;
+  background: #37475C;
+  border-radius: 0 0 8px 8px;
+}
+
+.livres { position: relative; width: 220px; height: 150px; }
+
+.livre {
+  position: absolute;
+  left: 0;
+  height: 26px;
+  border-radius: 4px 8px 8px 4px;
+}
+.livre::before {
+  content: "";
+  position: absolute;
+  left: 10px; top: 0; bottom: 0;
+  width: 5px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.livre::after {
+  content: "";
+  position: absolute;
+  right: 6px; top: 5px; bottom: 5px;
+  width: 8px;
+  background: #F6F1E7;
+  border-radius: 2px;
+}
+
+.debout {
+  position: absolute;
+  right: 0; bottom: 0;
+  width: 34px; height: 118px;
+  background: #2F6B4F;
+  border-radius: 6px 4px 4px 6px;
+  transform: rotate(-23deg);
+  transform-origin: bottom right;
+  margin-bottom: 11px
+}
+.debout::before,
+.debout::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.debout::before { top: 10px; }
+.debout::after  { bottom: 10px; }
+
+.tasse {
+  position: relative;         
+  width: 46px;
+  height: 40px;
+  background: #E8574B;
+  border-radius: 4px 4px 16px 16px;
+  margin-right: 16px;         
+}
+
+.tasse::before {
+  content: "";
+  position: absolute;
+  right: -16px;
+  top: 8px;
+  width: 14px;
+  height: 18px;
+  border: 5px solid #E8574B;
+  border-left: none;
+  border-radius: 0 14px 14px 0;
+  box-sizing: border-box;
+}
+
+.tasse::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 4px;
+  height: 5px;
+  background: #8C5A2B;
+  border-radius: 3px;
+}
+
+.vapeur {
+  position: absolute;
+  left: 50%;
+  top: -22px;
+  width: 4px;
+  height: 16px;
+  background: rgba(92, 112, 137, 0.45);
+  border-radius: 3px;
+  animation: fumer 2s ease-in-out infinite;
+}
+
+@keyframes fumer {
+  0%   { transform: translateX(-50%) translateY(0);    opacity: 0; }
+  30%  { opacity: 1; }
+  100% { transform: translateX(-50%) translateY(-14px); opacity: 0; }
+}
