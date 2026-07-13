@@ -1,9 +1,28 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
+const technicalSkills = [
+  { label: "Analyse du besoin", to: "/competences/analyse-du-besoin" },
+  { label: "Concevoir une solution", to: "/competences/concevoir-une-solution" },
+  { label: "Développement d'une solution", to: "/competences/developpement-d-une-solution" },
+  { label: "Étude d'une documentation", to: "/competences/etude-d-une-documentation" },
+  { label: "Maintenance et évolution", to: "/competences/maintenance-et-evolution" },
+  { label: "Raisonnement logique", to: "/competences/raisonnement-logique" },
+];
+
+const humanSkills = [
+  { label: "Capacité de remise en question", to: "/competences/capacite-remise-en-question" },
+  { label: "Rigueur", to: "/competences/rigueur" },
+  { label: "Esprit collaboratif", to: "/competences/esprit-collaboratif" },
+  { label: "Sens du dialogue et de la pédagogie", to: "/competences/sens-du-dialogue-et-pedagogie" },
+];
+
 function NavBar() {
+  const [competencesOpen, setCompetencesOpen] = useState(false);
+
   return (
-    <nav className="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-default">
-      <div className="flex justify-between p-4">
+    <nav className="bg-white sticky w-full z-20 top-0 inset-s-0 border-default">
+      <div className="flex justify-between p-8">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
             src="https://flowbite.com/docs/images/logo.svg"
@@ -60,10 +79,14 @@ function NavBar() {
                 </a>
               </li>
             </NavLink>
-            <li>
+            <li className="relative">
               <button
-                id="dropdownNvbarButton"
-                data-dropdown-toggle="dropdownNavbar"
+                id="dropdownCompetencesButton"
+                type="button"
+                onClick={() => setCompetencesOpen((open) => !open)}
+                aria-haspopup="true"
+                aria-expanded={competencesOpen}
+                aria-controls="dropdownCompetences"
                 className="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0"
               >
                 Compétences
@@ -86,46 +109,46 @@ function NavBar() {
                 </svg>
               </button>
               <div
-                id="dropdownNavbar"
-                className="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44"
+                id="dropdownCompetences"
+                className={`${competencesOpen ? "" : "hidden"} absolute z-10 mt-2 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72`}
               >
-                <ul
+                <div
                   className="p-2 text-sm text-body font-medium"
-                  aria-labelledby="dropdownNvbarButton"
+                  aria-labelledby="dropdownCompetencesButton"
                 >
-                  <li>
-                    <a
-                      href="#"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Dashboard
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Settings
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Earnings
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Sign out
-                    </a>
-                  </li>
-                </ul>
+                  <p className="px-2 pt-1 pb-1 text-xs font-semibold uppercase tracking-wide text-body/70">
+                    Techniques
+                  </p>
+                  <ul>
+                    {technicalSkills.map((skill) => (
+                      <li key={skill.to}>
+                        <NavLink
+                          to={skill.to}
+                          onClick={() => setCompetencesOpen(false)}
+                          className="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                        >
+                          {skill.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="px-2 pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-body/70">
+                    Humaines
+                  </p>
+                  <ul>
+                    {humanSkills.map((skill) => (
+                      <li key={skill.to}>
+                        <NavLink
+                          to={skill.to}
+                          onClick={() => setCompetencesOpen(false)}
+                          className="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                        >
+                          {skill.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </li>
             <li>
