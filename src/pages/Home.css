@@ -1,13 +1,11 @@
-
 .bureau-wrap {
   display: flex;
   flex-direction: column;
 }
 
-
 .scene {
   display: flex;
-  align-items: flex-end;   
+  align-items: flex-end;
   justify-content: center;
   gap: 48px;
   padding: 56px 16px 0;
@@ -16,20 +14,23 @@
 
 .sol {
   height: 14px;
-  background: #C99B6B;
+  background: #c99b6b;
   border-radius: 7px;
   width: min(800px, 92vw);
   margin: 0 auto;
 }
 
-.laptop { position: relative; width: 260px; }
+.laptop {
+  position: relative;
+  width: 260px;
+}
 
 .ecran {
   width: 230px;
   height: 150px;
   margin: 0 auto;
   background: #243447;
-  border: 8px solid #37475C;
+  border: 8px solid #37475c;
   border-bottom-width: 10px;
   border-radius: 10px 10px 0 0;
   padding: 14px 16px;
@@ -45,7 +46,7 @@
 .socle {
   width: 260px;
   height: 12px;
-  background: #4A5D75;
+  background: #4a5d75;
   border-radius: 0 0 12px 12px;
   position: relative;
 }
@@ -53,14 +54,20 @@
 .socle::after {
   content: "";
   position: absolute;
-  left: 50%; top: 0;
+  left: 50%;
+  top: 0;
   transform: translateX(-50%);
-  width: 56px; height: 5px;
-  background: #37475C;
+  width: 56px;
+  height: 5px;
+  background: #37475c;
   border-radius: 0 0 8px 8px;
 }
 
-.livres { position: relative; width: 220px; height: 150px; }
+.livres {
+  position: relative;
+  width: 220px;
+  height: 150px;
+}
 
 .livre {
   position: absolute;
@@ -71,47 +78,58 @@
 .livre::before {
   content: "";
   position: absolute;
-  left: 10px; top: 0; bottom: 0;
+  left: 10px;
+  top: 0;
+  bottom: 0;
   width: 5px;
   background: rgba(255, 255, 255, 0.4);
 }
 .livre::after {
   content: "";
   position: absolute;
-  right: 6px; top: 5px; bottom: 5px;
+  right: 6px;
+  top: 5px;
+  bottom: 5px;
   width: 8px;
-  background: #F6F1E7;
+  background: #f6f1e7;
   border-radius: 2px;
 }
 
 .debout {
   position: absolute;
-  right: 0; bottom: 0;
-  width: 34px; height: 118px;
-  background: #2F6B4F;
+  right: 0;
+  bottom: 0;
+  width: 34px;
+  height: 118px;
+  background: #2f6b4f;
   border-radius: 6px 4px 4px 6px;
   transform: rotate(-23deg);
   transform-origin: bottom right;
-  margin-bottom: 11px
+  margin-bottom: 11px;
 }
 .debout::before,
 .debout::after {
   content: "";
   position: absolute;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   height: 5px;
   background: rgba(255, 255, 255, 0.4);
 }
-.debout::before { top: 10px; }
-.debout::after  { bottom: 10px; }
+.debout::before {
+  top: 10px;
+}
+.debout::after {
+  bottom: 10px;
+}
 
 .tasse {
-  position: relative;         
+  position: relative;
   width: 46px;
   height: 40px;
-  background: #E8574B;
+  background: #e8574b;
   border-radius: 4px 4px 16px 16px;
-  margin-right: 16px;         
+  margin-right: 16px;
 }
 
 .tasse::before {
@@ -121,7 +139,7 @@
   top: 8px;
   width: 14px;
   height: 18px;
-  border: 5px solid #E8574B;
+  border: 5px solid #e8574b;
   border-left: none;
   border-radius: 0 14px 14px 0;
   box-sizing: border-box;
@@ -134,7 +152,7 @@
   right: 5px;
   top: 4px;
   height: 5px;
-  background: #8C5A2B;
+  background: #8c5a2b;
   border-radius: 3px;
 }
 
@@ -150,7 +168,37 @@
 }
 
 @keyframes fumer {
-  0%   { transform: translateX(-50%) translateY(0);    opacity: 0; }
-  30%  { opacity: 1; }
-  100% { transform: translateX(-50%) translateY(-14px); opacity: 0; }
+  0% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-14px);
+    opacity: 0;
+  }
+}
+
+.myName {
+  font-size: 40px;
+  font-weight: 400;
+  margin-left: -40px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.shortDescription {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.homeContainer {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
 }

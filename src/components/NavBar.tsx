@@ -3,36 +3,57 @@ import { NavLink } from "react-router-dom";
 
 const technicalSkills = [
   { label: "Analyse du besoin", to: "/competences/analyse-du-besoin" },
-  { label: "Concevoir une solution", to: "/competences/concevoir-une-solution" },
-  { label: "Développement d'une solution", to: "/competences/developpement-d-une-solution" },
-  { label: "Étude d'une documentation", to: "/competences/etude-d-une-documentation" },
-  { label: "Maintenance et évolution", to: "/competences/maintenance-et-evolution" },
+  {
+    label: "Concevoir une solution",
+    to: "/competences/concevoir-une-solution",
+  },
+  {
+    label: "Développement d'une solution",
+    to: "/competences/developpement-d-une-solution",
+  },
+  {
+    label: "Étude d'une documentation",
+    to: "/competences/etude-d-une-documentation",
+  },
+  {
+    label: "Maintenance et évolution",
+    to: "/competences/maintenance-et-evolution",
+  },
   { label: "Raisonnement logique", to: "/competences/raisonnement-logique" },
 ];
 
 const humanSkills = [
-  { label: "Capacité de remise en question", to: "/competences/capacite-remise-en-question" },
+  {
+    label: "Capacité de remise en question",
+    to: "/competences/capacite-remise-en-question",
+  },
   { label: "Rigueur", to: "/competences/rigueur" },
   { label: "Esprit collaboratif", to: "/competences/esprit-collaboratif" },
-  { label: "Sens du dialogue et de la pédagogie", to: "/competences/sens-du-dialogue-et-pedagogie" },
+  {
+    label: "Sens du dialogue et de la pédagogie",
+    to: "/competences/sens-du-dialogue-et-pedagogie",
+  },
 ];
 
 function NavBar() {
   const [competencesOpen, setCompetencesOpen] = useState(false);
 
   return (
-    <nav className="bg-white sticky w-full z-20 top-0 inset-s-0 border-default">
+    <nav className="bg-#fffdf5; sticky w-full z-20 top-0 inset-s-0 border-default">
       <div className="flex justify-between p-8">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <NavLink
+          to="/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-7"
-            alt="Flowbite Logo"
+            src="/profilePicture.png"
+            className="h-10 w-10 rounded-full object-cover"
+            alt="Pauline Havez"
           />
           <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
-            Flowbite
+            Pauline Havez
           </span>
-        </a>
+        </NavLink>
         <button
           data-collapse-toggle="navbar-dropdown"
           type="button"
