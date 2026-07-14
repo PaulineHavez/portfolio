@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout";
-import About from "./pages/About";
+import Presentation from "./pages/about/Presentation";
+import Curriculum from "./pages/about/Curriculum";
 import NeedAnalysis from "./pages/skills/NeedAnalysis";
 import QuestionOneSelf from "./pages/skills/QuestionOneSelf";
 import DesignSolution from "./pages/skills/DesignSolution";
@@ -23,8 +24,12 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/about",
-        element: <About />,
+        path: "/a-propos/presentation",
+        element: <Presentation />,
+      },
+      {
+        path: "/a-propos/parcours",
+        element: <Curriculum />,
       },
       {
         path: "/competences/analyse-du-besoin",

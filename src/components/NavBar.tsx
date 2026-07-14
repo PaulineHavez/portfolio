@@ -35,9 +35,16 @@ const humanSkills = [
   },
 ];
 
+const aboutLinks = [
+  { label: "Présentation", to: "/a-propos/presentation" },
+  { label: "Parcours", to: "/a-propos/parcours" },
+];
+
 function NavBar() {
   const [competencesOpen, setCompetencesOpen] = useState(false);
   const competencesRef = useRef<HTMLLIElement>(null);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const aboutRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     if (!competencesOpen) return;
@@ -55,8 +62,24 @@ function NavBar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [competencesOpen]);
 
+  useEffect(() => {
+    if (!aboutOpen) return;
+
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        aboutRef.current &&
+        !aboutRef.current.contains(event.target as Node)
+      ) {
+        setAboutOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [aboutOpen]);
+
   return (
-    <nav className="bg-#fffdf5; sticky w-full z-20 top-0 inset-s-0 border-default">
+    <nav className="bg-[#fffdf5] sticky w-full z-20 top-0 inset-s-0 border-default">
       <div className="flex justify-between p-8">
         <NavLink
           to="/"
@@ -107,16 +130,57 @@ function NavBar() {
                 Home
               </a>
             </li>
-            <NavLink to="/about">
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+            <li className="relative" ref={aboutRef}>
+              <button
+                id="dropdownAboutButton"
+                type="button"
+                onClick={() => setAboutOpen((open) => !open)}
+                aria-haspopup="true"
+                aria-expanded={aboutOpen}
+                aria-controls="dropdownAbout"
+                className="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0"
+              >
+                À propos
+                <svg
+                  className="w-4 h-4 ms-1.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
                 >
-                  À propos
-                </a>
-              </li>
-            </NavLink>
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 9-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                id="dropdownAbout"
+                className={`${aboutOpen ? "" : "hidden"} absolute z-10 mt-2 bg-[#FFFDF5] border border-mist-50 rounded-3xl shadow-lg w-56`}
+              >
+                <ul
+                  className="p-2 text-sm text-body font-medium"
+                  aria-labelledby="dropdownAboutButton"
+                >
+                  {aboutLinks.map((link) => (
+                    <li key={link.to}>
+                      <NavLink
+                        to={link.to}
+                        onClick={() => setAboutOpen(false)}
+                        className="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                      >
+                        {link.label}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
             <li className="relative" ref={competencesRef}>
               <button
                 id="dropdownCompetencesButton"
@@ -257,16 +321,6 @@ function NavBar() {
                 </ul>
               </div>
             </li>
-            <NavLink to="/contact">
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
-                >
-                  Contact
-                </a>
-              </li>
-            </NavLink>
           </ul>
         </div>
       </div>

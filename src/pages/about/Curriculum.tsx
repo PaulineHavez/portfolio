@@ -122,7 +122,7 @@ function CarteEvenement(e: Evenement) {
   );
 }
 
-export default function FriseParcours() {
+export default function Curriculum() {
   return (
     <div className="frise-page">
       <style>{styles}</style>
