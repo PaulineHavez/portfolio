@@ -218,6 +218,11 @@ function NavBar() {
                   className="p-2 text-sm text-body font-medium"
                   aria-labelledby="dropdownCompetencesButton"
                 >
+                  <NavLink to="/competences/general">
+                    <p className="px-2 pt-1 pb-1 text-xs font-semibold uppercase tracking-wide text-body/70">
+                      Vue générale
+                    </p>
+                  </NavLink>
                   <p className="px-2 pt-1 pb-1 text-xs font-semibold uppercase tracking-wide text-body/70">
                     Techniques
                   </p>

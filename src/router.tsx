@@ -13,12 +13,17 @@ import LogicalReasoning from "./pages/skills/LogicalReasoning";
 import Rigor from "./pages/skills/Rigor";
 import DialogueAndPedagogy from "./pages/skills/DialogueAndPedagogy";
 import Home from "./pages/Home";
+import GeneralSkills from "./pages/skills/General";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
+      {
+        path: "/competences/general",
+        element: <GeneralSkills />,
+      },
       {
         path: "/",
         element: <Home />,
