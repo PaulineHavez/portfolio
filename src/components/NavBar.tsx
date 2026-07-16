@@ -105,7 +105,7 @@ function NavBar() {
   }, [projectsOpen]);
 
   return (
-    <nav className="bg-[#fffdf5] sticky w-full z-20 top-0 inset-s-0 border-default">
+    <nav className="bg-white sticky w-full z-20 top-0 inset-s-0 border-default">
       <div className="flex justify-between p-8">
         <NavLink
           to="/"
@@ -187,7 +187,7 @@ function NavBar() {
               </button>
               <div
                 id="dropdownAbout"
-                className={`${aboutOpen ? "" : "hidden"} absolute right-0 z-10 mt-2 bg-[#FFFDF5] border border-mist-50 rounded-3xl shadow-lg w-56`}
+                className={`${aboutOpen ? "" : "hidden"} absolute right-0 z-10 mt-2 bg-white border border-mist-50 rounded-3xl shadow-lg w-56`}
               >
                 <ul
                   className="p-2 text-sm text-body font-medium"
@@ -238,7 +238,7 @@ function NavBar() {
               </button>
               <div
                 id="dropdownCompetences"
-                className={`${competencesOpen ? "" : "hidden"} absolute right-0 z-10 mt-2 bg-[#FFFDF5] border border-mist-50 rounded-3xl shadow-lg w-72`}
+                className={`${competencesOpen ? "" : "hidden"} absolute right-0 z-10 mt-2 bg-white border border-mist-50 rounded-3xl shadow-lg w-72`}
               >
                 <div
                   className="p-2 text-sm text-body font-medium"
@@ -315,7 +315,7 @@ function NavBar() {
               </button>
               <div
                 id="dropdownProjects"
-                className={`${projectsOpen ? "" : "hidden"} absolute right-0 z-10 mt-2 bg-[#FFFDF5] border border-mist-50 rounded-3xl shadow-lg w-64`}
+                className={`${projectsOpen ? "" : "hidden"} absolute right-0 z-10 mt-2 bg-white border border-mist-50 rounded-3xl shadow-lg w-64`}
               >
                 <ul
                   className="p-2 text-sm text-body font-medium"
