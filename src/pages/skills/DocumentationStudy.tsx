@@ -1,32 +1,226 @@
+import { NavLink } from "react-router-dom";
+
 export default function DocumentationStudy() {
   return (
     <article className="max-w-3xl mx-auto px-4 py-12 space-y-4">
-      <h1 className="text-3xl font-bold text-heading">Étude d'une documentation</h1>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Ma définition</h2>
-      <p className="text-body leading-relaxed">L'<strong>étude d'une documentation</strong>, c'est la capacité à <strong>comprendre et retrouver les informations dans la documentation d'une stack</strong> — framework, librairie, langage ou outil. Cette compétence a plusieurs visages, du plus classique au plus contemporain :</p>
-      <p className="text-body leading-relaxed">- la version <strong>classique</strong> : lire la documentation officielle d'une technologie, savoir s'y orienter, en comprendre la structure et le vocabulaire ;</p>
-      <p className="text-body leading-relaxed">- la recherche sur <strong>internet</strong> : chercher des réponses à un problème donné (articles techniques, forums, blogs spécialisés), en sachant évaluer la fiabilité des sources ;</p>
-      <p className="text-body leading-relaxed">- et aujourd'hui, l'usage de l'<strong>IA</strong> comme outil de récupération d'information — avec une exigence essentielle : <strong>lui demander ses sources</strong>, afin de pouvoir vérifier l'information plutôt que de la croire sur parole.</p>
-      <p className="text-body leading-relaxed">Cette compétence est d'autant plus stratégique que l'<strong>écosystème du développement web est en mutation rapide</strong> : nouveaux frameworks, outils d'IA, évolutions de versions qui se succèdent à un rythme soutenu, comme le montrent [les tendances tech du développement pour 2026](https://www.idlen.io/fr/blog/tendances-tech-developpement-2026). Dans un tel environnement, aucun développeur ne peut « tout savoir » : ce qui fait la différence, c'est la capacité à <strong>trouver vite une information fiable</strong> et à l'exploiter correctement. Savoir étudier une documentation, c'est en somme savoir apprendre en continu.</p>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Mes éléments de preuve</h2>
-      <h3 className="text-xl font-semibold text-heading mt-6">Migration de Vuetify 2 vers Vuetify 3 : la documentation comme feuille de route</h3>
-      <p className="text-body leading-relaxed">Durant mon alternance chez <strong>Fifteen</strong>, j'ai travaillé sur la <strong>migration de Vuetify 2 vers Vuetify 3</strong>, la librairie de composants UI de l'application. Ce chantier reposait entièrement sur l'étude de la <strong>documentation de Vuetify</strong> : comprendre précisément <strong>quoi migrer</strong> (composants renommés, props modifiées, comportements changés entre les deux versions majeures), puis <strong>mettre en place un processus de migration adapté</strong> — une sorte de <strong>protocole</strong> permettant de vérifier, composant par composant, que rien n'avait été oublié dans ce qu'il fallait migrer.</p>
-      <p className="text-body leading-relaxed"><strong>Résultat et valeur ajoutée</strong> : j'ai <strong>migré plusieurs composants de l'application</strong> de manière fiable. Ma valeur ajoutée a été double : la migration elle-même, mais aussi la <strong>méthode</strong> — transformer une documentation de migration dense en un protocole de vérification systématique, réduisant le risque d'oubli et rendant le travail reproductible pour les composants suivants.</p>
-      <p className="text-body leading-relaxed">👉 [Voir la réalisation associée : migration Vuetify 2 → 3 chez Fifteen](#) *(lien vers la page de la réalisation)*</p>
-      <h3 className="text-xl font-semibold text-heading mt-6">Étudier la documentation de Vue pour comprendre le framework</h3>
-      <p className="text-body leading-relaxed">Toujours chez Fifteen, ma montée en compétence sur <strong>Vue</strong> est passée par l'<strong>étude de sa documentation officielle</strong> : c'est en la lisant méthodiquement que j'ai compris les mécanismes du framework — dont sa réactivité, ses composables et ses valeurs calculées. Cette étude documentaire a été le socle de mon autonomie sur la stack du projet : plutôt que de dépendre systématiquement des autres développeurs, j'ai appris à trouver mes réponses à la source.</p>
-      <p className="text-body leading-relaxed">👉 [Voir la réalisation associée : montée en compétence sur Vue](#) *(lien vers la page de la réalisation)*</p>
-      <h3 className="text-xl font-semibold text-heading mt-6">Étudier les articles de Google sur le SEO pour construire une sitemap</h3>
-      <p className="text-body leading-relaxed">Enfin, pour construire la <strong>sitemap</strong> d'un site (voir ma réalisation sur la conception de solution), j'ai étudié les <strong>articles et la documentation de Google sur le SEO</strong> : comprendre ce qu'attend un moteur de recherche d'une sitemap, ses formats, ses règles et ses bonnes pratiques. Cette étude illustre une autre facette de la compétence : la documentation à étudier n'est pas toujours celle d'un framework — il faut parfois aller chercher l'information chez l'acteur qui fait autorité sur le sujet (ici Google pour le référencement).</p>
-      <p className="text-body leading-relaxed"><strong>Résultat et valeur ajoutée</strong> : la solution de sitemap développée repose sur des exigences réelles et documentées, et non sur des suppositions — ce qui garantit sa pertinence pour le référencement du site.</p>
-      <p className="text-body leading-relaxed">👉 [Voir la réalisation associée : génération de sitemap chez Fifteen](#) *(lien vers la page de la réalisation)*</p>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Mon autocritique</h2>
-      <p className="text-body leading-relaxed"><strong>Mon niveau de maîtrise</strong> : je considère <strong>maîtriser en partie cette compétence</strong> : je sais faire des recherches pour trouver l'information, que ce soit dans une documentation officielle, sur internet ou via l'IA. La marge de progression se situe dans la vitesse et dans la finesse — savoir aller toujours plus vite à l'information pertinente, y compris dans des documentations très volumineuses ou mal structurées.</p>
-      <p className="text-body leading-relaxed"><strong>Sa place dans mon profil</strong> : dans un métier où les technologies se renouvellent en permanence, cette compétence est un <strong>multiplicateur</strong> : elle conditionne ma vitesse d'apprentissage de toutes les autres compétences techniques. Je la considère donc comme hautement prioritaire — c'est elle qui m'a permis de monter rapidement en compétence sur Vue, Vuetify ou le SEO.</p>
-      <p className="text-body leading-relaxed"><strong>Mon recul et mes conseils</strong> : le point de vigilance majeur aujourd'hui concerne l'<strong>IA</strong> : il faut faire attention à ses <strong>biais</strong>, car elle peut envoyer sur de mauvaises pistes. Deux réflexes me paraissent essentiels : <strong>toujours vérifier ses sources</strong> — demander à l'IA d'où vient l'information et la contrôler —, et <strong>poser des questions de manière neutre, sans influencer l'IA</strong> : une question orientée (« pourquoi X est-il la meilleure solution ? ») produit une réponse orientée, là où une question neutre (« quelles sont les approches possibles pour X ? ») laisse place à une réponse plus fiable. Pour acquérir cette compétence, je conseille donc de <strong>lire des documentations</strong>, de <strong>faire des recherches</strong> régulièrement, et de <strong>s'entraîner à formuler des questions neutres à l'IA</strong> pour ne pas biaiser ses réponses.</p>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Mon évolution dans cette compétence</h2>
-      <p className="text-body leading-relaxed">Dans mon <strong>projet personnel et professionnel</strong>, mon objectif à moyen terme est de faire de cette compétence un réflexe d'expert : être capable d'aborder n'importe quelle nouvelle technologie ou documentation — même complexe ou volumineuse — et d'en extraire rapidement l'information fiable dont j'ai besoin, en combinant intelligemment documentation officielle, recherche web et IA.</p>
-      <p className="text-body leading-relaxed"><strong>Le chemin, encore et toujours, c'est la pratique</strong> : continuer de <strong>pratiquer et d'expérimenter</strong> — chaque nouveau projet, chaque nouvelle stack est une occasion d'étudier une documentation. À cela s'ajoute un axe d'autoformation spécifique et très actuel : <strong>faire des recherches sur les bonnes pratiques d'utilisation de l'IA</strong> — comment bien <strong>prompter</strong>, comment formuler des questions neutres, comment exiger et vérifier les sources — afin de tirer le meilleur de ces outils sans en subir les biais. Cette double pratique, classique et moderne, me permettra de rester efficace dans un écosystème qui ne cessera d'évoluer.</p>
+      <h1 className="text-3xl font-bold text-heading">
+        Étude d'une documentation
+      </h1>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Ma définition
+      </h2>
+      <p className="text-body leading-relaxed">
+        L'<strong>étude d'une documentation</strong>, c'est la capacité à{" "}
+        <strong>
+          comprendre et retrouver les informations dans la documentation d'une
+          stack
+        </strong>{" "}
+        — framework, librairie, langage ou outil. Cette compétence a plusieurs
+        visages, du plus classique au plus contemporain :
+      </p>
+      <p className="text-body leading-relaxed">
+        - la version <strong>classique</strong> : lire la documentation
+        officielle d'une technologie, savoir s'y orienter, en comprendre la
+        structure et le vocabulaire ;
+      </p>
+      <p className="text-body leading-relaxed">
+        - la recherche sur <strong>internet</strong> : chercher des réponses à
+        un problème donné (articles techniques, forums, blogs spécialisés), en
+        sachant évaluer la fiabilité des sources ;
+      </p>
+      <p className="text-body leading-relaxed">
+        - et aujourd'hui, l'usage de l'<strong>IA</strong> comme outil de
+        récupération d'information — avec une exigence essentielle :{" "}
+        <strong>lui demander ses sources</strong>, afin de pouvoir vérifier
+        l'information plutôt que de la croire sur parole.
+      </p>
+      <p className="text-body leading-relaxed">
+        Cette compétence est d'autant plus stratégique que l'
+        <strong>
+          écosystème du développement web est en mutation rapide
+        </strong>{" "}
+        : nouveaux frameworks, outils d'IA, évolutions de versions qui se
+        succèdent à un rythme soutenu, comme le montrent{" "}
+        <a
+          href="https://www.idlen.io/fr/blog/tendances-tech-developpement-2026"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary underline hover:no-underline"
+        >
+          les tendances tech du développement pour 2026
+        </a>
+        . Dans un tel environnement, aucun développeur ne peut « tout savoir » :
+        ce qui fait la différence, c'est la capacité à{" "}
+        <strong>trouver vite une information fiable</strong> et à l'exploiter
+        correctement. Savoir étudier une documentation, c'est en somme savoir
+        apprendre en continu.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Mes éléments de preuve
+      </h2>
+      <h3 className="text-xl font-semibold text-heading mt-6">
+        Migration de Vuetify 2 vers Vuetify 3 : la documentation comme feuille
+        de route
+      </h3>
+      <p className="text-body leading-relaxed">
+        Durant mon alternance chez <strong>Fifteen</strong>, j'ai travaillé sur
+        la <strong>migration de Vuetify 2 vers Vuetify 3</strong>, la librairie
+        de composants UI de l'application. Ce chantier reposait entièrement sur
+        l'étude de la <strong>documentation de Vuetify</strong> : comprendre
+        précisément <strong>quoi migrer</strong> (composants renommés, props
+        modifiées, comportements changés entre les deux versions majeures), puis{" "}
+        <strong>mettre en place un processus de migration adapté</strong> — une
+        sorte de <strong>protocole</strong> permettant de vérifier, composant
+        par composant, que rien n'avait été oublié dans ce qu'il fallait migrer.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Résultat et valeur ajoutée</strong> : j'ai{" "}
+        <strong>migré plusieurs composants de l'application</strong> de manière
+        fiable. J'ai ainsi apporté ma pierre à l'édifice du projet de migration
+        d'une librairie d'une application. Ce type de projet demande
+        d'entretenir une motivation régulière car il s'étale généralement dans
+        un temps long.
+      </p>
+      <h3 className="text-xl font-semibold text-heading mt-6">
+        Étudier la documentation de Vue pour comprendre le framework
+      </h3>
+      <p className="text-body leading-relaxed">
+        Toujours chez Fifteen, ma montée en compétence sur <strong>Vue</strong>{" "}
+        est passée par l'<strong>étude de sa documentation officielle</strong> :
+        c'est en la lisant méthodiquement que j'ai compris les mécanismes du
+        framework — dont sa réactivité, ses composables et ses valeurs
+        calculées. Cette étude documentaire a été le socle de mon autonomie sur
+        la stack du projet : plutôt que de dépendre systématiquement des autres
+        développeurs, j'ai appris à trouver mes réponses à la source.
+      </p>
+      <h3 className="text-xl font-semibold text-heading mt-6">
+        Étudier les articles de Google sur le SEO pour construire une sitemap
+      </h3>
+      <p className="text-body leading-relaxed">
+        Enfin, pour construire la <strong>sitemap</strong> d'un site (voir ma
+        réalisation sur la conception de solution), j'ai étudié les{" "}
+        <strong>articles et la documentation de Google sur le SEO</strong> :
+        comprendre ce qu'attend un moteur de recherche d'une sitemap, ses
+        formats, ses règles et ses bonnes pratiques. Cette étude illustre une
+        autre facette de la compétence : la documentation à étudier n'est pas
+        toujours celle d'un framework — il faut parfois aller chercher
+        l'information chez l'acteur qui fait autorité sur le sujet (ici Google
+        pour le référencement).
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Résultat et valeur ajoutée</strong> : la solution de sitemap
+        développée repose sur des exigences réelles et documentées, et non sur
+        des suppositions — ce qui garantit sa pertinence pour le référencement
+        du site.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Mon autocritique
+      </h2>
+      <p className="text-body leading-relaxed">
+        <strong>Mon niveau de maîtrise</strong> : je considère{" "}
+        <strong>maîtriser en partie cette compétence</strong> : je sais faire
+        des recherches pour trouver l'information, que ce soit dans une
+        documentation officielle, sur internet ou via l'IA. La marge de
+        progression se situe dans la vitesse et dans la finesse — savoir aller
+        toujours plus vite à l'information pertinente, y compris dans des
+        documentations très volumineuses ou mal structurées.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Sa place dans mon profil</strong> : dans un métier où les
+        technologies se renouvellent en permanence, cette compétence est un{" "}
+        <strong>multiplicateur</strong> : elle conditionne ma vitesse
+        d'apprentissage de toutes les autres compétences techniques. Je la
+        considère donc comme hautement prioritaire — c'est elle qui m'a permis
+        de monter rapidement en compétence sur Vue, Vuetify ou le SEO.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Mon recul et mes conseils</strong> : le point de vigilance
+        majeur aujourd'hui concerne l'<strong>IA</strong> : il faut faire
+        attention à ses <strong>biais</strong>, car elle peut envoyer sur de
+        mauvaises pistes. Deux réflexes me paraissent essentiels :{" "}
+        <strong>toujours vérifier ses sources</strong> — demander à l'IA d'où
+        vient l'information et la contrôler —, et{" "}
+        <strong>
+          poser des questions de manière neutre, sans influencer l'IA
+        </strong>{" "}
+        : une question orientée (« pourquoi X est-il la meilleure solution ? »)
+        produit une réponse orientée, là où une question neutre (« quelles sont
+        les approches possibles pour X ? ») laisse place à une réponse plus
+        fiable. Pour acquérir cette compétence, je conseille donc de{" "}
+        <strong>lire des documentations</strong>, de{" "}
+        <strong>faire des recherches</strong> régulièrement, et de{" "}
+        <strong>s'entraîner à formuler des questions neutres à l'IA</strong>{" "}
+        pour ne pas biaiser ses réponses.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Mon évolution dans cette compétence
+      </h2>
+      <p className="text-body leading-relaxed">
+        Dans mon <strong>projet personnel et professionnel</strong>, mon
+        objectif à moyen terme est de faire de cette compétence un réflexe
+        d'expert : être capable d'aborder n'importe quelle nouvelle technologie
+        ou documentation — même complexe ou volumineuse — et d'en extraire
+        rapidement l'information fiable dont j'ai besoin, en combinant
+        intelligemment documentation officielle, recherche web et IA.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Le chemin, encore et toujours, c'est la pratique</strong> :
+        continuer de <strong>pratiquer et d'expérimenter</strong> — chaque
+        nouveau projet, chaque nouvelle stack est une occasion d'étudier une
+        documentation. À cela s'ajoute un axe d'autoformation spécifique et très
+        actuel :{" "}
+        <strong>
+          faire des recherches sur les bonnes pratiques d'utilisation de l'IA
+        </strong>{" "}
+        — comment bien <strong>prompter</strong>, comment formuler des questions
+        neutres, comment exiger et vérifier les sources — afin de tirer le
+        meilleur de ces outils sans en subir les biais. Cette double pratique,
+        classique et moderne, me permettra de rester efficace dans un écosystème
+        qui ne cessera d'évoluer.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Principales réalisations rattachées à cette compétence
+      </h2>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/eco-city-guide"
+          className="text-primary underline hover:no-underline"
+        >
+          Eco City Guide — étude de la documentation JavaScript nécessaire au
+          développement du MVP en équipe
+        </NavLink>
+      </p>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/migration-vuetify"
+          className="text-primary underline hover:no-underline"
+        >
+          Migration Vuetify 2 → 3 — étude de la documentation Vuetify comme
+          feuille de route de la migration
+        </NavLink>
+      </p>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/shopwise"
+          className="text-primary underline hover:no-underline"
+        >
+          Shopwise — étude de la documentation Angular et Spring pour cadrer
+          les choix techniques du projet
+        </NavLink>
+      </p>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/sitemap-nuxt-strapi"
+          className="text-primary underline hover:no-underline"
+        >
+          Sitemap dynamique Nuxt & Strapi — étude de la documentation Strapi,
+          Nuxt et des articles Google sur le SEO
+        </NavLink>
+      </p>
     </article>
   );
 }

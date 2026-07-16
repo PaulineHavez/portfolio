@@ -1,27 +1,207 @@
+import { NavLink } from "react-router-dom";
+
 export default function DesignSolution() {
   return (
     <article className="max-w-3xl mx-auto px-4 py-12 space-y-4">
-      <h1 className="text-3xl font-bold text-heading">Concevoir une solution</h1>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Ma définition</h2>
-      <p className="text-body leading-relaxed"><strong>Concevoir une solution</strong>, c'est imaginer et structurer la réponse technique à un besoin, avant et pendant son implémentation. Une bonne conception doit produire une solution <strong>adaptée</strong> au besoin et au contexte du projet, <strong>flexible</strong>, respectueuse des <strong>bonnes pratiques</strong> générales du développement ainsi que des <strong>conventions propres au projet</strong> dans lequel elle s'intègre, et <strong>pérenne ou modulable</strong> lorsque le besoin l'exige. Concevoir, ce n'est donc pas seulement « faire fonctionner » : c'est faire des choix — d'architecture, de librairies, de découpage du code — qui rendront la solution compréhensible, maintenable et évolutive dans le temps.</p>
-      <p className="text-body leading-relaxed">Cette compétence s'appuie également sur la connaissance des <strong>design patterns</strong> couramment utilisés : ces schémas de conception éprouvés offrent des réponses reconnues à des problèmes récurrents, et constituent un langage commun entre développeurs.</p>
-      <p className="text-body leading-relaxed">Cette exigence de conception est au cœur de l'actualité du développement : l'essor de l'<strong>intelligence artificielle</strong> pousse les équipes vers des <strong>systèmes plus modulaires et évolutifs</strong>, capables d'intégrer rapidement de nouveaux composants et de s'adapter à des technologies qui changent vite, comme le soulignent [les tendances tech du développement pour 2026](https://www.idlen.io/fr/blog/tendances-tech-developpement-2026). Dans ce contexte, un code monolithique et rigide devient un handicap : la valeur d'un développeur réside de plus en plus dans sa capacité à concevoir des solutions qui savent évoluer.</p>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Mes éléments de preuve</h2>
-      <h3 className="text-xl font-semibold text-heading mt-6">Concevoir de A à Z la génération d'une sitemap chez Fifteen</h3>
-      <p className="text-body leading-relaxed">Durant mon alternance chez <strong>Fifteen</strong>, j'ai travaillé sur la conception d'une <strong>sitemap</strong> pour un site. J'ai dû <strong>concevoir la solution de A à Z</strong>, ce qui recouvrait l'ensemble des choix de conception :</p>
-      <p className="text-body leading-relaxed">- le <strong>choix des librairies</strong> adaptées au besoin et à l'écosystème technique du projet ;</p>
-      <p className="text-body leading-relaxed">- la <strong>création de helpers</strong>, pour factoriser la logique et garder un code clair ;</p>
-      <p className="text-body leading-relaxed">- l'<strong>utilisation de plugins et de middlewares</strong> afin de générer la sitemap <strong>côté serveur</strong>.</p>
-      <p className="text-body leading-relaxed">Au-delà du simple fonctionnement, mon objectif de conception était double : produire une solution <strong>lisible</strong> — aisément compréhensible pour n'importe quel développeur qui reprendrait le code — et <strong>maintenable</strong> — capable d'évoluer dans le temps, par exemple si de nouvelles pages ou de nouvelles règles de génération devaient être ajoutées.</p>
-      <p className="text-body leading-relaxed"><strong>Résultat et valeur ajoutée</strong> : la sitemap est générée côté serveur de manière fiable, et la solution est structurée de façon à ce que son évolution ne nécessite pas de tout réécrire. Ma valeur ajoutée a été de ne pas me contenter d'une solution « qui marche » : j'ai pensé la solution comme un composant durable du projet, en assumant l'ensemble des choix techniques — librairies, helpers, middlewares — et en les organisant pour servir la lisibilité et la maintenabilité.</p>
-      <p className="text-body leading-relaxed">👉 [Voir la réalisation associée : génération de sitemap chez Fifteen](#) *(lien vers la page de la réalisation)*</p>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Mon autocritique</h2>
-      <p className="text-body leading-relaxed"><strong>Mon niveau de maîtrise</strong> : cette compétence est <strong>en cours d'acquisition</strong>. Je commence à me poser <strong>les bonnes questions</strong> au moment de concevoir : maintenance, évolution, modularité, performance… Ces réflexes de conception s'installent progressivement dans ma pratique. Mais je suis lucide sur le chemin restant : j'ai encore <strong>beaucoup à apprendre sur les design patterns</strong>, et plus généralement sur l'art d'adapter une solution pour qu'elle soit <strong>viable et pertinente au sein du projet</strong> dans lequel elle s'intègre — car une bonne solution dans l'absolu peut être une mauvaise solution dans un contexte donné.</p>
-      <p className="text-body leading-relaxed"><strong>Sa place dans mon profil</strong> : la conception est pour moi une compétence <strong>structurante</strong> dans mon métier de développeur web et dans mon futur profil d'expert en ingénierie. Elle marque la différence entre écrire du code et construire du logiciel : c'est elle qui détermine si un projet restera sain et évolutif dans deux ans, ou s'il deviendra une dette technique. C'est donc une compétence que je place en <strong>haute priorité</strong> dans ma progression.</p>
-      <p className="text-body leading-relaxed"><strong>Mon recul et mes conseils</strong> : pour renforcer cette compétence, je retiens trois leviers : <strong>expérimenter des solutions</strong> (car c'est en concevant — et parfois en se trompant — que l'on apprend ce qui tient dans le temps), <strong>discuter avec d'autres développeurs</strong> (revues de code, échanges d'expérience : la conception se nourrit de la confrontation des points de vue), et <strong>étudier les design patterns</strong> pour enrichir sa boîte à outils conceptuelle. Mon conseil, pour moi-même comme pour les autres : ne jamais concevoir seul dans son coin trop longtemps — un regard extérieur révèle très vite les faiblesses d'une conception.</p>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Mon évolution dans cette compétence</h2>
-      <p className="text-body leading-relaxed">Dans mon <strong>projet personnel et professionnel</strong>, je vise à moyen terme un niveau de conception me permettant de proposer, en autonomie et avec assurance, des architectures adaptées à des projets de complexité croissante — en sachant justifier chaque choix (librairie, pattern, découpage) au regard du contexte du projet.</p>
-      <p className="text-body leading-relaxed"><strong>Pour y parvenir</strong>, ma feuille de route est claire : <strong>continuer à expérimenter</strong> de nouvelles solutions dans mes projets professionnels et personnels, <strong>poursuivre les échanges avec des développeurs</strong> plus expérimentés — notamment à travers les revues de code et les discussions d'architecture de mon alternance —, et <strong>apprendre davantage de design patterns</strong> par l'autoformation : lecture d'ouvrages et d'articles de référence sur les patterns, documentation, et mise en pratique systématique de chaque pattern étudié dans un cas concret, car un pattern ne s'acquiert réellement qu'en l'implémentant.</p>
+      <h1 className="text-3xl font-bold text-heading">
+        Concevoir une solution
+      </h1>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Ma définition
+      </h2>
+      <p className="text-body leading-relaxed">
+        <strong>Concevoir une solution</strong>, c'est imaginer et structurer la
+        réponse technique à un besoin, avant et pendant son implémentation. Une
+        bonne conception doit produire une solution <strong>adaptée</strong> au
+        besoin et au contexte du projet, <strong>flexible</strong>, respectueuse
+        des <strong>bonnes pratiques</strong> générales du développement ainsi
+        que des <strong>conventions propres au projet</strong> dans lequel elle
+        s'intègre. Elle doit également être{" "}
+        <strong>pérenne ou modulable</strong> lorsque le besoin l'exige.
+        Concevoir, ce n'est donc pas seulement « faire fonctionner » : c'est
+        faire des choix — d'architecture, de librairies, de découpage du code —
+        qui rendront la solution compréhensible, maintenable et évolutive dans
+        le temps.
+      </p>
+      <p className="text-body leading-relaxed">
+        Cette compétence s'appuie également sur la connaissance des{" "}
+        <strong>design patterns</strong> couramment utilisés : ces schémas de
+        conception éprouvés offrent des réponses reconnues à des problèmes
+        récurrents, et constituent un socle de connaissances commun entre
+        développeurs.
+      </p>
+      <p className="text-body leading-relaxed">
+        Cette exigence de conception est au cœur de l'actualité du développement
+        : l'essor de l'<strong>intelligence artificielle</strong> pousse les
+        équipes vers des <strong>systèmes plus modulaires et évolutifs</strong>,
+        capables d'intégrer rapidement de nouveaux composants et de s'adapter à
+        des technologies qui changent vite, comme le soulignent{" "}
+        <a
+          href="https://www.idlen.io/fr/blog/tendances-tech-developpement-2026"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary underline hover:no-underline"
+        >
+          les tendances tech du développement pour 2026
+        </a>
+        . Dans ce contexte, un code monolithique et rigide devient un handicap :
+        la valeur d'un développeur réside de plus en plus dans sa capacité à
+        concevoir des solutions qui savent évoluer.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Mes éléments de preuve
+      </h2>
+      <h3 className="text-xl font-semibold text-heading mt-6">
+        Concevoir de A à Z la génération d'une sitemap chez Fifteen
+      </h3>
+      <p className="text-body leading-relaxed">
+        Durant mon alternance chez <strong>Fifteen</strong>, j'ai travaillé sur
+        la conception d'une <strong>sitemap</strong> pour un site. J'ai dû{" "}
+        <strong>concevoir la solution de A à Z</strong>, ce qui recouvrait
+        l'ensemble des choix de conception :
+      </p>
+      <p className="text-body leading-relaxed">
+        - le <strong>choix des librairies</strong> adaptées au besoin et à
+        l'écosystème technique du projet ;
+      </p>
+      <p className="text-body leading-relaxed">
+        - la <strong>création de helpers</strong>, pour factoriser la logique et
+        garder un code clair ;
+      </p>
+      <p className="text-body leading-relaxed">
+        - l'<strong>utilisation de plugins et de middlewares</strong> afin de
+        générer la sitemap <strong>côté serveur</strong>.
+      </p>
+      <p className="text-body leading-relaxed">
+        Au-delà du simple fonctionnement, mon objectif de conception était
+        double : produire une solution <strong>lisible</strong> — aisément
+        compréhensible pour n'importe quel développeur qui reprendrait le code —
+        et <strong>maintenable</strong> — capable d'évoluer dans le temps, par
+        exemple si de nouvelles pages ou de nouvelles règles de génération
+        devaient être ajoutées.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Résultat et valeur ajoutée</strong> : la sitemap est générée
+        côté serveur de manière fiable, et la solution est structurée de façon à
+        ce que son évolution ne nécessite pas de tout réécrire. Ma valeur
+        ajoutée a été de ne pas me contenter d'une solution « qui marche » :
+        j'ai pensé la solution comme un composant durable du projet, en assumant
+        l'ensemble des choix techniques — librairies, helpers, middlewares — et
+        en les organisant pour servir la lisibilité et la maintenabilité.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Mon auto-critique
+      </h2>
+      <p className="text-body leading-relaxed">
+        <strong>Mon niveau de maîtrise</strong> : cette compétence est{" "}
+        <strong>en cours d'acquisition</strong>. Je commence à me poser{" "}
+        <strong>les bonnes questions</strong> au moment de concevoir :
+        maintenance, évolution, modularité, performance… Ces réflexes de
+        conception s'installent progressivement dans ma pratique. Mais je suis
+        lucide sur le chemin restant : j'ai encore{" "}
+        <strong>beaucoup à apprendre sur les design patterns</strong>, et plus
+        généralement sur l'art d'adapter une solution pour qu'elle soit{" "}
+        <strong>viable et pertinente au sein du projet</strong> dans lequel elle
+        s'intègre — car une bonne solution dans l'absolu peut être une mauvaise
+        solution dans un contexte donné.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Sa place dans mon profil</strong> : la conception est pour moi
+        une compétence <strong>structurante</strong> dans mon métier de
+        développeur web et dans mon futur profil d'expert en ingénierie. Elle
+        marque la différence entre écrire du code et construire du logiciel :
+        c'est elle qui détermine si un projet restera sain et évolutif dans deux
+        ans, ou s'il deviendra une dette technique. C'est donc une compétence
+        que je place en <strong>haute priorité</strong> dans ma progression.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Mon recul et mes conseils</strong> : pour renforcer cette
+        compétence, je retiens trois leviers :{" "}
+        <strong>expérimenter des solutions</strong> (car c'est en concevant — et
+        parfois en se trompant — que l'on apprend ce qui tient dans le temps),{" "}
+        <strong>discuter avec d'autres développeurs</strong> (revues de code,
+        échanges d'expérience : la conception se nourrit de la confrontation des
+        points de vue), et <strong>étudier les design patterns</strong> pour
+        enrichir sa boîte à outils conceptuelle. Mon conseil, pour moi-même
+        comme pour les autres : ne jamais concevoir seul dans son coin trop
+        longtemps — un regard extérieur révèle très vite les faiblesses d'une
+        conception.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Mon évolution dans cette compétence
+      </h2>
+      <p className="text-body leading-relaxed">
+        Dans mon <strong>projet personnel et professionnel</strong>, je vise à
+        moyen terme un niveau de conception me permettant de proposer, en
+        autonomie et avec assurance, des architectures adaptées à des projets de
+        complexité croissante — en sachant justifier chaque choix (librairie,
+        pattern, découpage) au regard du contexte du projet.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Pour y parvenir</strong>, ma feuille de route est claire :{" "}
+        <strong>continuer à expérimenter</strong> de nouvelles solutions dans
+        mes projets professionnels et personnels,{" "}
+        <strong>poursuivre les échanges avec des développeurs</strong> plus
+        expérimentés — notamment à travers les revues de code et les discussions
+        d'architecture de mon alternance —, et{" "}
+        <strong>apprendre davantage de design patterns</strong> par
+        l'auto-formation : lecture d'ouvrages et d'articles de référence sur les
+        patterns, documentation, et mise en pratique systématique de chaque
+        pattern étudié dans un cas concret, car un pattern ne s'acquiert
+        réellement qu'en l'implémentant.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Principales réalisations rattachées à cette compétence
+      </h2>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/eco-city-guide"
+          className="text-primary underline hover:no-underline"
+        >
+          Eco City Guide — choix des stacks techniques et conception du MVP en
+          équipe
+        </NavLink>
+      </p>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/hackathon-ia"
+          className="text-primary underline hover:no-underline"
+        >
+          Hackathon IA — conception d'un agent conversationnel en deux jours
+        </NavLink>
+      </p>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/migration-vuetify"
+          className="text-primary underline hover:no-underline"
+        >
+          Migration Vuetify 2 → 3 — conception d'une stratégie de migration en
+          deux temps
+        </NavLink>
+      </p>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/shopwise"
+          className="text-primary underline hover:no-underline"
+        >
+          Shopwise — conception du schéma de base de données et de
+          l'architecture back-end / front-end
+        </NavLink>
+      </p>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/sitemap-nuxt-strapi"
+          className="text-primary underline hover:no-underline"
+        >
+          Sitemap dynamique Nuxt & Strapi — conception de A à Z de la génération
+          de sitemap chez Fifteen
+        </NavLink>
+      </p>
     </article>
   );
 }

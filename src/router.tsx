@@ -14,6 +14,11 @@ import Rigor from "./pages/skills/Rigor";
 import DialogueAndPedagogy from "./pages/skills/DialogueAndPedagogy";
 import Home from "./pages/Home";
 import GeneralSkills from "./pages/skills/General";
+import Shopwise from "./pages/projects/Shopwise";
+import EcoCityGuide from "./pages/projects/EcoCityGuide";
+import HackathonIA from "./pages/projects/HackathonIA";
+import SitemapNuxtStrapi from "./pages/projects/SitemapNuxtStrapi";
+import MigrationVuetify from "./pages/projects/MigrationVuetify";
 
 export const router = createBrowserRouter([
   {
@@ -75,6 +80,26 @@ export const router = createBrowserRouter([
       {
         path: "/competences/sens-du-dialogue-et-pedagogie",
         element: <DialogueAndPedagogy />,
+      },
+      {
+        path: "/projets/shopwise",
+        element: <Shopwise />,
+      },
+      {
+        path: "/projets/eco-city-guide",
+        element: <EcoCityGuide />,
+      },
+      {
+        path: "/projets/hackathon-ia",
+        element: <HackathonIA />,
+      },
+      {
+        path: "/projets/sitemap-nuxt-strapi",
+        element: <SitemapNuxtStrapi />,
+      },
+      {
+        path: "/projets/migration-vuetify",
+        element: <MigrationVuetify />,
       },
     ],
   },

@@ -1,27 +1,191 @@
+import { NavLink } from "react-router-dom";
+
 export default function MaintenanceEvolution() {
   return (
     <article className="max-w-3xl mx-auto px-4 py-12 space-y-4">
-      <h1 className="text-3xl font-bold text-heading">Maintenance et évolution</h1>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Ma définition</h2>
-      <p className="text-body leading-relaxed">La <strong>maintenance et l'évolution</strong>, c'est la capacité à faire vivre une solution logicielle dans le temps : maintenir son bon fonctionnement, la faire évoluer avec son écosystème, et notamment <strong>mettre en place un processus de migration</strong> d'une librairie, d'un framework ou de toute dépendance technique. Un logiciel n'est jamais figé : ses dépendances publient de nouvelles versions, corrigent des failles de sécurité, abandonnent d'anciennes API. Savoir organiser ces <strong>migrations</strong> — c'est-à-dire définir un processus rigoureux pour passer d'une version à une autre sans rien casser ni rien oublier — est au cœur de cette compétence.</p>
-      <p className="text-body leading-relaxed">Un <strong>processus de migration de librairie</strong> typique comprend : l'étude des changements entre versions (*breaking changes*), l'inventaire de ce qui est impacté dans le code, la migration méthodique élément par élément, et la vérification systématique que rien n'a été oublié ni cassé.</p>
-      <p className="text-body leading-relaxed">L'actualité offre une illustration spectaculaire de ces enjeux : la <strong>migration massive vers Linux engagée en France</strong>, motivée par un enjeu de <strong>souveraineté numérique</strong>. Comme le rapporte [cet article de TechRadar](https://www.techradar.com/pro/regain-control-of-our-digital-destiny-france-to-ditch-windows-for-linux-to-reduce-reliance-on-us-tech), des administrations françaises abandonnent Windows au profit de Linux pour réduire leur dépendance aux technologies américaines. Cet exemple montre que la migration n'est pas qu'une question technique de développeur : c'est un enjeu stratégique, organisationnel et même géopolitique — et sa réussite repose précisément sur des processus de migration rigoureux, à toutes les échelles.</p>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Mes éléments de preuve</h2>
-      <h3 className="text-xl font-semibold text-heading mt-6">Créer un protocole de migration de composants pour Vuetify 2 → Vuetify 3</h3>
-      <p className="text-body leading-relaxed">Durant mon alternance chez <strong>Fifteen</strong>, j'ai participé à la migration de la librairie de composants <strong>Vuetify 2 vers Vuetify 3</strong>. Face à l'ampleur des changements entre ces deux versions majeures, j'ai <strong>créé un protocole personnel de migration de composants</strong> : une démarche systématique me permettant de <strong>vérifier que je n'avais rien oublié</strong> en migrant chaque composant — props renommées, comportements modifiés, syntaxe à adapter.</p>
-      <p className="text-body leading-relaxed"><strong>Résultat et valeur ajoutée</strong> : ce protocole a fiabilisé mon travail de migration en le rendant systématique plutôt qu'artisanal : chaque composant migré passait par les mêmes vérifications, réduisant fortement le risque d'oubli et de régression. Ma valeur ajoutée a été de ne pas subir la migration mais de l'<strong>outiller</strong> : là où une migration au fil de l'eau expose à des oublis découverts en production, mon protocole rendait le travail vérifiable et reproductible.</p>
-      <p className="text-body leading-relaxed">👉 [Voir la réalisation associée : migration Vuetify 2 → 3 chez Fifteen](#) *(lien vers la page de la réalisation)*</p>
-      <h3 className="text-xl font-semibold text-heading mt-6">Valider des PR de montées de dépendances</h3>
-      <p className="text-body leading-relaxed">Toujours chez Fifteen, j'ai également <strong>validé des pull requests de montées de dépendances</strong> : lorsqu'une librairie du projet était mise à jour, mon rôle était de relire la PR et de <strong>vérifier que la montée de dépendance n'avait rien cassé</strong> — en contrôlant les changements apportés par la nouvelle version et en testant les fonctionnalités susceptibles d'être impactées.</p>
-      <p className="text-body leading-relaxed"><strong>Résultat et valeur ajoutée</strong> : ces validations contribuent directement à la santé du projet dans la durée : des dépendances régulièrement mises à jour et vérifiées, c'est moins de dette technique, moins de failles de sécurité, et des migrations futures plus faciles. Ma valeur ajoutée était d'apporter une vérification réelle — et non une validation de pure forme — à un processus dont dépend la stabilité de l'application.</p>
-      <p className="text-body leading-relaxed">👉 [Voir la réalisation associée : revues de montées de dépendances chez Fifteen](#) *(lien vers la page de la réalisation)*</p>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Mon autocritique</h2>
-      <p className="text-body leading-relaxed"><strong>Mon niveau de maîtrise</strong> : cette compétence est <strong>en cours d'acquisition</strong>. Ce que je constate, c'est une progression par réflexes : <strong>plus j'apprends, plus j'ai les bons réflexes</strong> et plus je pense spontanément à <strong>concevoir des solutions maintenables dans le temps et facilement</strong>. La maintenabilité cesse progressivement d'être une vérification a posteriori pour devenir un critère présent dès la conception.</p>
-      <p className="text-body leading-relaxed"><strong>Sa place dans mon profil</strong> : cette compétence gagne en importance à mesure que je comprends la réalité du métier : la majeure partie de la vie d'un logiciel se passe <strong>après</strong> son développement initial. Un développeur qui ne pense que « création » produit de la dette technique ; un développeur qui pense « maintenance et évolution » produit des solutions durables. C'est donc une compétence que je place haut dans mes priorités de progression, en complément direct de la conception et du développement.</p>
-      <p className="text-body leading-relaxed"><strong>Mon recul et mes conseils</strong> : pour acquérir cette compétence, il faut <strong>coder, expérimenter et se renseigner sur les bonnes pratiques</strong>, sur les <strong>enjeux de maintenance</strong> et sur les <strong>problématiques réellement rencontrées</strong> par les équipes. La maintenance ne s'apprend pas dans l'abstrait : c'est en vivant une vraie migration, en subissant un vrai breaking change, qu'on comprend pourquoi les processus rigoureux existent. Mon conseil : documenter ses propres protocoles — comme je l'ai fait pour Vuetify — car formaliser sa démarche, c'est à la fois fiabiliser son travail présent et capitaliser pour les migrations futures.</p>
-      <h2 className="text-2xl font-semibold text-heading mt-8">Mon évolution dans cette compétence</h2>
-      <p className="text-body leading-relaxed">Dans mon <strong>projet personnel et professionnel</strong>, mon objectif à moyen terme est d'être capable de piloter des migrations et des chantiers de maintenance de plus grande ampleur — non plus seulement migrer des composants selon un protocole, mais définir la stratégie de migration elle-même à l'échelle d'une application, en anticipant les risques et en organisant les vérifications.</p>
-      <p className="text-body leading-relaxed"><strong>Pour y parvenir</strong>, mon plan d'autoformation s'articule autour de trois axes : <strong>faire des recherches</strong> sur les bonnes pratiques de maintenance et de migration, <strong>coder</strong> — car chaque projet maintenu dans la durée est une école de maintenance —, et <strong>affiner mes connaissances sur les enjeux des applications et les problématiques rencontrées</strong> : maintenance, évolution, mais aussi <strong>performance</strong> et <strong>sécurité</strong>, qui sont intimement liées (une dépendance non mise à jour est souvent une faille de sécurité en puissance). Cette vision globale des enjeux du cycle de vie d'une application est ce qui me permettra de passer d'exécutant de migrations à concepteur de stratégies de maintenance.</p>
+      <h1 className="text-3xl font-bold text-heading">
+        Maintenance et évolution
+      </h1>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Ma définition
+      </h2>
+      <p className="text-body leading-relaxed">
+        La <strong>maintenance et l'évolution</strong>, c'est la capacité à
+        faire vivre une solution logicielle dans le temps : maintenir son bon
+        fonctionnement, la faire évoluer avec son écosystème, et notamment{" "}
+        <strong>mettre en place un processus de migration</strong> d'une
+        librairie, d'un framework ou de toute dépendance technique. Un logiciel
+        n'est jamais figé : ses dépendances publient de nouvelles versions,
+        corrigent des failles de sécurité, abandonnent d'anciennes API. Savoir
+        organiser ces <strong>migrations</strong> — c'est-à-dire définir un
+        processus rigoureux pour passer d'une version à une autre sans rien
+        casser ni rien oublier — est au cœur de cette compétence.
+      </p>
+      <p className="text-body leading-relaxed">
+        Un <strong>processus de migration de librairie</strong> typique comprend
+        : l'étude des changements entre versions (*breaking changes*),
+        l'inventaire de ce qui est impacté dans le code, la migration méthodique
+        élément par élément, et la vérification systématique que rien n'a été
+        oublié ni cassé.
+      </p>
+      <p className="text-body leading-relaxed">
+        L'actualité offre une illustration spectaculaire de ces enjeux : la{" "}
+        <strong>migration massive vers Linux engagée en France</strong>, motivée
+        par un enjeu de <strong>souveraineté numérique</strong>. Comme le
+        rapporte{" "}
+        <a
+          href="https://www.techradar.com/pro/regain-control-of-our-digital-destiny-france-to-ditch-windows-for-linux-to-reduce-reliance-on-us-tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary underline hover:no-underline"
+        >
+          cet article de TechRadar
+        </a>
+        , des administrations françaises abandonnent Windows au profit de Linux
+        pour réduire leur dépendance aux technologies américaines. Cet exemple
+        montre que la migration n'est pas qu'une question technique de
+        développeur : c'est un enjeu stratégique, organisationnel et même
+        géopolitique — et sa réussite repose précisément sur des processus de
+        migration rigoureux, à toutes les échelles.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Mes éléments de preuve
+      </h2>
+      <h3 className="text-xl font-semibold text-heading mt-6">
+        Créer un protocole de migration de composants pour Vuetify 2 → Vuetify 3
+      </h3>
+      <p className="text-body leading-relaxed">
+        Durant mon alternance chez <strong>Fifteen</strong>, j'ai participé à la
+        migration de la librairie de composants{" "}
+        <strong>Vuetify 2 vers Vuetify 3</strong>. Face à l'ampleur des
+        changements entre ces deux versions majeures, j'ai{" "}
+        <strong>créé un protocole personnel de migration de composants</strong>{" "}
+        : une démarche systématique me permettant de{" "}
+        <strong>vérifier que je n'avais rien oublié</strong> en migrant chaque
+        composant — props renommées, comportements modifiés, syntaxe à adapter.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Résultat et valeur ajoutée</strong> : ce protocole a fiabilisé
+        mon travail de migration en le rendant systématique plutôt qu'artisanal
+        : chaque composant migré passait par les mêmes vérifications, réduisant
+        fortement le risque d'oubli et de régression. Ma valeur ajoutée a été de
+        ne pas subir la migration mais de l'<strong>outiller</strong> : là où
+        une migration au fil de l'eau expose à des oublis découverts en
+        production, mon protocole rendait le travail vérifiable et
+        reproductible.
+      </p>
+      <h3 className="text-xl font-semibold text-heading mt-6">
+        Valider des PR de montées de dépendances
+      </h3>
+      <p className="text-body leading-relaxed">
+        Toujours chez Fifteen, j'ai également{" "}
+        <strong>validé des pull requests de montées de dépendances</strong> :
+        lorsqu'une librairie du projet était mise à jour, mon rôle était de
+        relire la PR et de{" "}
+        <strong>vérifier que la montée de dépendance n'avait rien cassé</strong>{" "}
+        — en contrôlant les changements apportés par la nouvelle version et en
+        testant les fonctionnalités susceptibles d'être impactées.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Résultat et valeur ajoutée</strong> : ces validations
+        contribuent directement à la santé du projet dans la durée : des
+        dépendances régulièrement mises à jour et vérifiées, c'est moins de
+        dette technique, moins de failles de sécurité, et des migrations futures
+        plus faciles. Ma valeur ajoutée était d'apporter une vérification réelle
+        — et non une validation de pure forme — à un processus dont dépend la
+        stabilité de l'application.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Mon autocritique
+      </h2>
+      <p className="text-body leading-relaxed">
+        <strong>Mon niveau de maîtrise</strong> : cette compétence est{" "}
+        <strong>en cours d'acquisition</strong>. Ce que je constate, c'est une
+        progression par réflexes :{" "}
+        <strong>plus j'apprends, plus j'ai les bons réflexes</strong> et plus je
+        pense spontanément à{" "}
+        <strong>
+          concevoir des solutions maintenables dans le temps et facilement
+        </strong>
+        . La maintenabilité cesse progressivement d'être une vérification a
+        posteriori pour devenir un critère présent dès la conception.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Sa place dans mon profil</strong> : cette compétence gagne en
+        importance à mesure que je comprends la réalité du métier : la majeure
+        partie de la vie d'un logiciel se passe <strong>après</strong> son
+        développement initial. Un développeur qui ne pense que « création »
+        produit de la dette technique ; un développeur qui pense « maintenance
+        et évolution » produit des solutions durables. C'est donc une compétence
+        que je place haut dans mes priorités de progression, en complément
+        direct de la conception et du développement.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Mon recul et mes conseils</strong> : pour acquérir cette
+        compétence, il faut{" "}
+        <strong>
+          coder, expérimenter et se renseigner sur les bonnes pratiques
+        </strong>
+        , sur les <strong>enjeux de maintenance</strong> et sur les{" "}
+        <strong>problématiques réellement rencontrées</strong> par les équipes.
+        La maintenance ne s'apprend pas dans l'abstrait : c'est en vivant une
+        vraie migration, en subissant un vrai breaking change, qu'on comprend
+        pourquoi les processus rigoureux existent. Mon conseil : documenter ses
+        propres protocoles — comme je l'ai fait pour Vuetify — car formaliser sa
+        démarche, c'est à la fois fiabiliser son travail présent et capitaliser
+        pour les migrations futures.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Mon évolution dans cette compétence
+      </h2>
+      <p className="text-body leading-relaxed">
+        Dans mon <strong>projet personnel et professionnel</strong>, mon
+        objectif à moyen terme est d'être capable de piloter des migrations et
+        des chantiers de maintenance de plus grande ampleur — non plus seulement
+        migrer des composants selon un protocole, mais définir la stratégie de
+        migration elle-même à l'échelle d'une application, en anticipant les
+        risques et en organisant les vérifications.
+      </p>
+      <p className="text-body leading-relaxed">
+        <strong>Pour y parvenir</strong>, mon plan d'autoformation s'articule
+        autour de trois axes : <strong>faire des recherches</strong> sur les
+        bonnes pratiques de maintenance et de migration, <strong>coder</strong>{" "}
+        — car chaque projet maintenu dans la durée est une école de maintenance
+        —, et{" "}
+        <strong>
+          affiner mes connaissances sur les enjeux des applications et les
+          problématiques rencontrées
+        </strong>{" "}
+        : maintenance, évolution, mais aussi <strong>performance</strong> et{" "}
+        <strong>sécurité</strong>, qui sont intimement liées (une dépendance non
+        mise à jour est souvent une faille de sécurité en puissance). Cette
+        vision globale des enjeux du cycle de vie d'une application est ce qui
+        me permettra de passer d'exécutant de migrations à concepteur de
+        stratégies de maintenance.
+      </p>
+      <h2 className="text-2xl font-semibold text-heading mt-8">
+        Principales réalisations rattachées à cette compétence
+      </h2>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/migration-vuetify"
+          className="text-primary underline hover:no-underline"
+        >
+          Migration Vuetify 2 → 3 — protocole de migration et validation de PR
+          de montées de dépendances
+        </NavLink>
+      </p>
+      <p className="text-body leading-relaxed">
+        -{" "}
+        <NavLink
+          to="/projets/sitemap-nuxt-strapi"
+          className="text-primary underline hover:no-underline"
+        >
+          Sitemap dynamique Nuxt & Strapi — solution pensée pour rester
+          maintenable à l'ajout de nouvelles pages
+        </NavLink>
+      </p>
     </article>
   );
 }

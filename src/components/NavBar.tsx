@@ -40,11 +40,21 @@ const aboutLinks = [
   { label: "Parcours", to: "/a-propos/parcours" },
 ];
 
+const projects = [
+  { label: "Shopwise", to: "/projets/shopwise" },
+  { label: "Eco City Guide", to: "/projets/eco-city-guide" },
+  { label: "Hackathon IA", to: "/projets/hackathon-ia" },
+  { label: "Sitemap Nuxt & Strapi", to: "/projets/sitemap-nuxt-strapi" },
+  { label: "Migration Vuetify 2 → 3", to: "/projets/migration-vuetify" },
+];
+
 function NavBar() {
   const [competencesOpen, setCompetencesOpen] = useState(false);
   const competencesRef = useRef<HTMLLIElement>(null);
   const [aboutOpen, setAboutOpen] = useState(false);
   const aboutRef = useRef<HTMLLIElement>(null);
+  const [projectsOpen, setProjectsOpen] = useState(false);
+  const projectsRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     if (!competencesOpen) return;
@@ -77,6 +87,22 @@ function NavBar() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [aboutOpen]);
+
+  useEffect(() => {
+    if (!projectsOpen) return;
+
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        projectsRef.current &&
+        !projectsRef.current.contains(event.target as Node)
+      ) {
+        setProjectsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [projectsOpen]);
 
   return (
     <nav className="bg-[#fffdf5] sticky w-full z-20 top-0 inset-s-0 border-default">
@@ -161,7 +187,7 @@ function NavBar() {
               </button>
               <div
                 id="dropdownAbout"
-                className={`${aboutOpen ? "" : "hidden"} absolute z-10 mt-2 bg-[#FFFDF5] border border-mist-50 rounded-3xl shadow-lg w-56`}
+                className={`${aboutOpen ? "" : "hidden"} absolute right-0 z-10 mt-2 bg-[#FFFDF5] border border-mist-50 rounded-3xl shadow-lg w-56`}
               >
                 <ul
                   className="p-2 text-sm text-body font-medium"
@@ -212,7 +238,7 @@ function NavBar() {
               </button>
               <div
                 id="dropdownCompetences"
-                className={`${competencesOpen ? "" : "hidden"} absolute z-10 mt-2 bg-[#FFFDF5] border border-mist-50 rounded-3xl shadow-lg w-72`}
+                className={`${competencesOpen ? "" : "hidden"} absolute right-0 z-10 mt-2 bg-[#FFFDF5] border border-mist-50 rounded-3xl shadow-lg w-72`}
               >
                 <div
                   className="p-2 text-sm text-body font-medium"
@@ -258,10 +284,14 @@ function NavBar() {
                 </div>
               </div>
             </li>
-            <li>
+            <li className="relative" ref={projectsRef}>
               <button
-                id="dropdownNvbarButton"
-                data-dropdown-toggle="dropdownNavbar"
+                id="dropdownProjectsButton"
+                type="button"
+                onClick={() => setProjectsOpen((open) => !open)}
+                aria-haspopup="true"
+                aria-expanded={projectsOpen}
+                aria-controls="dropdownProjects"
                 className="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0"
               >
                 Projets
@@ -284,45 +314,24 @@ function NavBar() {
                 </svg>
               </button>
               <div
-                id="dropdownNavbar"
-                className="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44"
+                id="dropdownProjects"
+                className={`${projectsOpen ? "" : "hidden"} absolute right-0 z-10 mt-2 bg-[#FFFDF5] border border-mist-50 rounded-3xl shadow-lg w-64`}
               >
                 <ul
                   className="p-2 text-sm text-body font-medium"
-                  aria-labelledby="dropdownNvbarButton"
+                  aria-labelledby="dropdownProjectsButton"
                 >
-                  <li>
-                    <a
-                      href="#"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Dashboard
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Settings
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Earnings
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                    >
-                      Sign out
-                    </a>
-                  </li>
+                  {projects.map((project) => (
+                    <li key={project.to}>
+                      <NavLink
+                        to={project.to}
+                        onClick={() => setProjectsOpen(false)}
+                        className="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                      >
+                        {project.label}
+                      </NavLink>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </li>
