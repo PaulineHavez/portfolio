@@ -52,7 +52,8 @@ export default function DialogueAndPedagogy() {
         Mes éléments de preuve
       </h2>
       <h3 className="text-xl font-semibold text-heading mt-6">
-        Former des profils non techniques lors d'un hackathon IA chez Fifteen
+        Former des profils non techniques lors d'un hackathon IA pendant mon
+        alternance
       </h3>
       <p className="text-body leading-relaxed">
         Pendant mon alternance, j'ai participé à un{" "}

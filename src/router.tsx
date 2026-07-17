@@ -20,87 +20,92 @@ import HackathonIA from "./pages/projects/HackathonIA";
 import SitemapNuxtStrapi from "./pages/projects/SitemapNuxtStrapi";
 import MigrationVuetify from "./pages/projects/MigrationVuetify";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/competences/general",
+          element: <GeneralSkills />,
+        },
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/a-propos/presentation",
+          element: <Presentation />,
+        },
+        {
+          path: "/a-propos/parcours",
+          element: <Curriculum />,
+        },
+        {
+          path: "/competences/analyse-du-besoin",
+          element: <NeedAnalysis />,
+        },
+        {
+          path: "/competences/capacite-remise-en-question",
+          element: <QuestionOneSelf />,
+        },
+        {
+          path: "/competences/concevoir-une-solution",
+          element: <DesignSolution />,
+        },
+        {
+          path: "/competences/developpement-d-une-solution",
+          element: <SolutionDevelopment />,
+        },
+        {
+          path: "/competences/esprit-collaboratif",
+          element: <CollaborativeSpirit />,
+        },
+        {
+          path: "/competences/etude-d-une-documentation",
+          element: <DocumentationStudy />,
+        },
+        {
+          path: "/competences/maintenance-et-evolution",
+          element: <MaintenanceEvolution />,
+        },
+        {
+          path: "/competences/raisonnement-logique",
+          element: <LogicalReasoning />,
+        },
+        {
+          path: "/competences/rigueur",
+          element: <Rigor />,
+        },
+        {
+          path: "/competences/sens-du-dialogue-et-pedagogie",
+          element: <DialogueAndPedagogy />,
+        },
+        {
+          path: "/projets/shopwise",
+          element: <Shopwise />,
+        },
+        {
+          path: "/projets/eco-city-guide",
+          element: <EcoCityGuide />,
+        },
+        {
+          path: "/projets/hackathon-ia",
+          element: <HackathonIA />,
+        },
+        {
+          path: "/projets/sitemap-nuxt-strapi",
+          element: <SitemapNuxtStrapi />,
+        },
+        {
+          path: "/projets/migration-vuetify",
+          element: <MigrationVuetify />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        path: "/competences/general",
-        element: <GeneralSkills />,
-      },
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/a-propos/presentation",
-        element: <Presentation />,
-      },
-      {
-        path: "/a-propos/parcours",
-        element: <Curriculum />,
-      },
-      {
-        path: "/competences/analyse-du-besoin",
-        element: <NeedAnalysis />,
-      },
-      {
-        path: "/competences/capacite-remise-en-question",
-        element: <QuestionOneSelf />,
-      },
-      {
-        path: "/competences/concevoir-une-solution",
-        element: <DesignSolution />,
-      },
-      {
-        path: "/competences/developpement-d-une-solution",
-        element: <SolutionDevelopment />,
-      },
-      {
-        path: "/competences/esprit-collaboratif",
-        element: <CollaborativeSpirit />,
-      },
-      {
-        path: "/competences/etude-d-une-documentation",
-        element: <DocumentationStudy />,
-      },
-      {
-        path: "/competences/maintenance-et-evolution",
-        element: <MaintenanceEvolution />,
-      },
-      {
-        path: "/competences/raisonnement-logique",
-        element: <LogicalReasoning />,
-      },
-      {
-        path: "/competences/rigueur",
-        element: <Rigor />,
-      },
-      {
-        path: "/competences/sens-du-dialogue-et-pedagogie",
-        element: <DialogueAndPedagogy />,
-      },
-      {
-        path: "/projets/shopwise",
-        element: <Shopwise />,
-      },
-      {
-        path: "/projets/eco-city-guide",
-        element: <EcoCityGuide />,
-      },
-      {
-        path: "/projets/hackathon-ia",
-        element: <HackathonIA />,
-      },
-      {
-        path: "/projets/sitemap-nuxt-strapi",
-        element: <SitemapNuxtStrapi />,
-      },
-      {
-        path: "/projets/migration-vuetify",
-        element: <MigrationVuetify />,
-      },
-    ],
-  },
-]);
+    basename: "/portfolio/",
+  }
+);
