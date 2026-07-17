@@ -113,10 +113,10 @@ function NavBar() {
         >
           <img
             src="/profilePicture.png"
-            className="h-10 w-10 rounded-full object-cover"
+            className="h-10 w-10 rounded-full object-cover  "
             alt="Pauline Havez"
           />
-          <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
+          <span className="self-center text-xl text-heading font-semibold whitespace-nowrap text-[#7d02a0]">
             Pauline Havez
           </span>
         </NavLink>
@@ -147,15 +147,6 @@ function NavBar() {
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-dropdown">
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
-                aria-current="page"
-              >
-                Home
-              </a>
-            </li>
             <li className="relative" ref={aboutRef}>
               <button
                 id="dropdownAboutButton"
@@ -164,7 +155,7 @@ function NavBar() {
                 aria-haspopup="true"
                 aria-expanded={aboutOpen}
                 aria-controls="dropdownAbout"
-                className="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0"
+                className="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-[#7d02a0] md:p-0"
               >
                 À propos
                 <svg
@@ -215,7 +206,7 @@ function NavBar() {
                 aria-haspopup="true"
                 aria-expanded={competencesOpen}
                 aria-controls="dropdownCompetences"
-                className="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0"
+                className="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-[#7d02a0] md:p-0"
               >
                 Compétences
                 <svg
@@ -292,7 +283,7 @@ function NavBar() {
                 aria-haspopup="true"
                 aria-expanded={projectsOpen}
                 aria-controls="dropdownProjects"
-                className="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0"
+                className="flex items-center justify-between w-full py-2 px-3 rounded font-medium text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-[#7d02a0] md:p-0"
               >
                 Projets
                 <svg

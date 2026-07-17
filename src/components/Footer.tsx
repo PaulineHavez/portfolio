@@ -25,6 +25,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
+          className="hover:text-[#363d44] transition-colors"
         >
           <FaGithub size={22} />
         </a>
@@ -33,12 +34,13 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
+          className="hover:text-[#363d44] transition-colors"
         >
           <FaLinkedin size={22} />
         </a>
         <button
           onClick={copyEmail}
-          className="emailButton"
+          className="emailButton hover:text-[#363d44] transition-colors"
           aria-label="Copier l'adresse email"
         >
           <IoMdMail size={22} />

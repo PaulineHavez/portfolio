@@ -16,19 +16,19 @@
   height: 14px;
   background: #c99b6b;
   border-radius: 7px;
-  width: min(800px, 92vw);
+  width: min(500px, 92vw);
   margin: 0 auto;
 }
 
 .laptop {
   position: relative;
-  width: 260px;
+  width: 200px;
 }
 
 .ecran {
-  width: 230px;
-  height: 150px;
-  margin: 0 auto;
+  width: 180px;
+  height: 115px;
+  margin-left: 10px;
   background: #243447;
   border: 8px solid #37475c;
   border-bottom-width: 10px;
@@ -36,7 +36,6 @@
   padding: 14px 16px;
   box-sizing: border-box;
 }
-
 .ligne {
   height: 8px;
   border-radius: 4px;
@@ -44,7 +43,7 @@
 }
 
 .socle {
-  width: 260px;
+  width: 200px;
   height: 12px;
   background: #4a5d75;
   border-radius: 0 0 12px 12px;
@@ -65,16 +64,17 @@
 
 .livres {
   position: relative;
-  width: 220px;
+  width: 120px;
   height: 150px;
 }
 
 .livre {
   position: absolute;
   left: 0;
-  height: 26px;
+  height: 20px;
   border-radius: 4px 8px 8px 4px;
 }
+
 .livre::before {
   content: "";
   position: absolute;
@@ -122,16 +122,16 @@
 .debout::after {
   bottom: 10px;
 }
-
 .tasse {
   position: relative;
   width: 46px;
   height: 40px;
-  background: #e8574b;
+  background: #d28e88;
   border-radius: 4px 4px 16px 16px;
-  margin-right: 16px;
+  margin-top: 28px;
+  margin-left: 35px;
+  margin-top: 46px;
 }
-
 .tasse::before {
   content: "";
   position: absolute;
@@ -139,7 +139,7 @@
   top: 8px;
   width: 14px;
   height: 18px;
-  border: 5px solid #e8574b;
+  border: 5px solid #d28e88;
   border-left: none;
   border-radius: 0 14px 14px 0;
   box-sizing: border-box;
@@ -152,7 +152,7 @@
   right: 5px;
   top: 4px;
   height: 5px;
-  background: #8c5a2b;
+  background: #f5dec9;
   border-radius: 3px;
 }
 
@@ -181,24 +181,15 @@
   }
 }
 
-.myName {
-  font-size: 40px;
-  font-weight: 400;
-  margin-left: -40px;
-  margin-bottom: 60px;
-  margin-top: 60px;
-}
-
-.shortDescription {
-  font-size: 60px;
-  margin-bottom: 20px;
-}
-
 .homeContainer {
-  position: absolute;
-  bottom: 14%;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  width: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 100px;
+  /* margin-top: 40px; */
+}
+
+.textContent {
+  max-width: 520px;
 }
