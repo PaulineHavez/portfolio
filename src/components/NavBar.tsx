@@ -112,7 +112,7 @@ function NavBar() {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img
-            src="/profilePicture.png"
+            src={`${import.meta.env.BASE_URL}profilePicture.png`}
             className="h-10 w-10 rounded-full object-cover  "
             alt="Pauline Havez"
           />
