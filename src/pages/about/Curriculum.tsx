@@ -91,7 +91,7 @@ const GRADUATIONS = [
   2027,
 ];
 
-const colonne = (annee: number): number => ANNEE_MAX - annee + 1;
+const colonne = (annee: number): number => annee - ANNEE_MIN + 1;
 
 const anneeFin = (e: Evenement): number => {
   if (e.fin) return e.fin;
@@ -104,7 +104,7 @@ function CarteEvenement(e: Evenement) {
   const duree = fin - e.annee + 1;
 
   const styleCarte: React.CSSProperties = {
-    gridColumn: `${colonne(fin)} / span ${duree}`,
+    gridColumn: `${colonne(e.annee)} / span ${duree}`,
   };
   const styleTige: React.CSSProperties = {
     gridColumn: `${colonne(e.annee)} / span 1`,
@@ -128,10 +128,9 @@ export default function Curriculum() {
       <style>{styles}</style>
 
       <header>
-        <p className="surtitre">Parcours</p>
         <h1>Mon parcours</h1>
         <p>
-          Frise anti-chronologique représentant mes études et expériences
+          Frise chronologique représentant mes études et expériences
           professionnelles pertinentes depuis 2014.
         </p>
       </header>
@@ -206,21 +205,21 @@ const styles = `
   grid-column: 1 / -1;
   align-self: start;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--accent) 92%, var(--ambre));
+  background: linear-gradient(90deg, var(--ambre), var(--accent) 8%, var(--accent));
   border-radius: 3px;
 }
 
 .frise::after {
   content: "";
   grid-row: 4;
-  grid-column: 1;
+  grid-column: -1;
   align-self: start;
-  justify-self: start;
+  justify-self: end;
   width: 0; height: 0;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  border-right: 14px solid var(--accent);
-  transform: translate(-13px, calc(-50% + 1.5px));
+  border-left: 14px solid var(--accent);
+  transform: translate(13px, calc(-50% + 1.5px));
 }
 
 .evenement { display: contents; }
